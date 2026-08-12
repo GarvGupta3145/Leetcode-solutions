@@ -1,20 +1,24 @@
 /**
- * APPROACH 3: Reverse PostOrder
-               right left root
+ * APPROACH 4: Using Stack in Reverse PostOrder
+             
  */
 class Solution {
 public:
-    void solve(TreeNode*root,TreeNode* &prev){
-        if(!root)return;
-        solve(root->right,prev);
-        solve(root->left,prev);
-        root->right=prev;
-        root->left=NULL;
-        prev=root;
-        return;
-    }
     void flatten(TreeNode* root) {
-        TreeNode*prev=NULL;
-        solve(root,prev);
+        if(!root)return;
+        stack<TreeNode*>st;
+        st.push(root);
+        while(!st.empty()){
+            TreeNode*curr=st.top();
+            st.pop();
+            
+            if(curr->right)st.push(curr->right);
+            if(curr->left)st.push(curr->left);
+            if(!st.empty()){
+                curr->right=st.top();
+                curr->left=NULL;
+            }
+            
+        }
     }
 };
