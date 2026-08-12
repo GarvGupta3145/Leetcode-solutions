@@ -1,5 +1,5 @@
 /**
- * Definition for a binary tree root.
+ * Definition for a binary tree node.
  * struct TreeNode {
  *     int val;
  *     TreeNode *left;
@@ -12,21 +12,29 @@
 class Solution {
 public:
     vector<int> preorderTraversal(TreeNode* root) {
-        vector<int>tree;
-        if(!root)return tree;
-        stack<TreeNode*>st;
-        st.push(root);
-        while(!st.empty()){
-            root=st.top();
-            st.pop();
-            tree.push_back(root->val);
-            if(root->right){
-                st.push(root->right);
+        vector<int> ans;
+        TreeNode*curr=root;
+        while(curr!=NULL){
+            if(curr->left==NULL){
+                ans.push_back(curr->val);
+                curr=curr->right;
             }
-            if(root->left){
-                st.push(root->left);
+            else{
+                TreeNode*prev=curr->left;
+                while(prev->right &&prev->right !=curr){
+                    prev=prev->right;
+                }
+                if(prev->right==NULL){
+                    prev->right=curr;
+                    ans.push_back(curr->val);
+                    curr=curr->left;
+                }
+                else{
+                    prev->right=NULL;
+                    curr=curr->right;
+                }
             }
         }
-        return tree;
+        return ans;
     }
 };
