@@ -12,7 +12,7 @@ public:
             }
             else if(mp[nums[i]]==k){
                 while(l<=i && nums[l]!=nums[i]){
-                    mp[l]--;
+                    mp[nums[l]]--;
                     count--;
                     l++;
                 }
