@@ -10,8 +10,7 @@ public:
                 count++;
             }
             else if(mp[nums[i]]==k){
-                mp.clear();
-                count=0;
+                
                 mp[nums[i]]++;
                 count++;
             }
