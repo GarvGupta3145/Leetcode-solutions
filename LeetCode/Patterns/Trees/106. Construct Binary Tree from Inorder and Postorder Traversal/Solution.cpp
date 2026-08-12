@@ -1,14 +1,17 @@
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
- *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
- *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
- * };
- */
+ /*
+    APPROACH:
+    - Last element of postorder = root of current subtree.
+    - Find root's index in inorder (use hashmap for O(1) lookup):
+      left of index = left subtree, right of index = right subtree.
+    - Use one postIdx pointer moving right-to-left in postorder.
+      Since postorder = [left, right, root], build RIGHT subtree
+      first, then LEFT, to keep postIdx aligned correctly.
+    - Base case: inLeft > inRight -> return nullptr.
+
+
+    TIME:  O(n)  -> hashmap gives O(1) root lookup in inorder
+    SPACE: O(n)  -> O(n) hashmap + O(h) recursion stack (h = tree height)
+*/
 class Solution {
 public:
     TreeNode* build(vector<int>&postorder,unordered_map<int,int>&mp,int i,int st,int end){
