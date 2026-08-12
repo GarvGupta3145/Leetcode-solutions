@@ -8,8 +8,8 @@
 Array, Hash Table, Divide and Conquer, Tree, Binary Tree
 
 ### 🚀 Performance
-- **Runtime:** 2 ms
-- **Memory:** 27.6 MB
+- **Runtime:** 7 ms
+- **Memory:** 27.5 MB
 
 ---
 
