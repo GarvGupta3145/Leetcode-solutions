@@ -15,10 +15,11 @@ public:
         if(!root)return true;
         if(!root->left && !root->right)return true;
         if(!root->left && root->right){
+            if(root->val >= root->right->val)return false;
             return isValidBST(root->right);
         }
         else if(!root->right && root->left){
-            i
+            if(root->val <= root->left->val)return false;
             return isValidBST(root->left);
         }
         if(root->val > root->left->val && root->val < root->right->val){
