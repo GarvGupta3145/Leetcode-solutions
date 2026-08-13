@@ -18,6 +18,7 @@ public:
             return isValidBST(root->right);
         }
         else if(!root->right && root->left){
+            i
             return isValidBST(root->left);
         }
         if(root->val > root->left->val && root->val < root->right->val){
