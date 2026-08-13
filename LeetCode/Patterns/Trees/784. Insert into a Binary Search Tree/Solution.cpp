@@ -11,33 +11,32 @@
  */
 class Solution {
 public:
-    TreeNode* createNode(int val){
-        TreeNode* node= new TreeNode(val);
-        return node;
+    TreeNode* CreateNode(TreeNode*root,int val){
+        TreeNode* newnode=new TreeNode(val);
+        return newnode;
     }
     TreeNode* insertIntoBST(TreeNode* root, int val) {
         if(!root){
-            TreeNode* node=createNode(val);
+            root=CreateNode(root,val);
             return root;
-        }
+        } 
         TreeNode*curr=root;
         while(1){
-            if(curr->val<val){
-                if(!curr->right){
-                    TreeNode* node=createNode(val);
-                    curr->right=node;
-                    return root;
+            if(curr->val>val){
+                if(curr->left==NULL){
+                    curr->left=CreateNode(curr,val);
+                    break;
                 }
-                else curr=curr->right;
+                curr=curr->left;
             }
             else{
-                if(!curr->left){
-                    TreeNode* node=createNode(val);
-                    curr->left=node;
-                    return root;
+                if(curr->right==NULL){
+                    curr->right=CreateNode(curr,val);
+                    break;
                 }
-                else curr=curr->left;
+                curr=curr->right;
             }
         }
+        return root;
     }
 };
