@@ -1,6 +1,6 @@
 # 📝 98. Validate Binary Search Tree (LeetCode)
 
-🔗 [Problem Link](https://leetcode.com/problems/validate-binary-search-tree/)
+🔗 [Problem Link](https://leetcode.com/problems/validate-binary-search-tree)
 
 ![Difficulty](https://img.shields.io/badge/Difficulty-Medium-orange) ![Language](https://img.shields.io/badge/Language-C++-blue)
 
