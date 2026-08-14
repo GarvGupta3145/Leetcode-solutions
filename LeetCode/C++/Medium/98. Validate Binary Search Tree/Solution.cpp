@@ -11,23 +11,31 @@
  */
 class Solution {
 public:
+    bool isValidBSTHelper(TreeNode* root, long &subMin, long &subMax) {
+        if (!root) return true; // empty subtree, no min/max to set here
+
+        long lmin, lmax, rmin, rmax;
+        bool leftValid = true, rightValid = true;
+
+        if (root->left) {
+            leftValid = isValidBSTHelper(root->left, lmin, lmax);
+            if (!leftValid || root->val <= lmax) return false;
+        }
+
+        if (root->right) {
+            rightValid = isValidBSTHelper(root->right, rmin, rmax);
+            if (!rightValid || root->val >= rmin) return false;
+        }
+
+        // propagate this subtree's min/max upward
+        subMin = root->left ? lmin : root->val;
+        subMax = root->right ? rmax : root->val;
+
+        return true;
+    }
+
     bool isValidBST(TreeNode* root) {
-        if(!root)return true;
-        if(!root->left && !root->right)return true;
-        if(!root->left && root->right){
-            if(root->val >= root->right->val)return false;
-            return isValidBST(root->right);
-        }
-        else if(!root->right && root->left){
-            if(root->val <= root->left->val)return false;
-            return isValidBST(root->left);
-        }
-        if(root->val > root->left->val && root->val < root->right->val){
-            bool left=isValidBST(root->left);
-            bool right=isValidBST(root->right);
-            if(left && right)return true;
-            else return false;
-        }
-        else return false;
+        long dummyMin, dummyMax;
+        return isValidBSTHelper(root, dummyMin, dummyMax);
     }
 };
