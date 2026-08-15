@@ -3,6 +3,7 @@ public:
     int longestSubsequence(vector<int>& nums) {
         int l=0;
         int n=nums.size();
+        
         for(int i=0;i<nums.size();i++){
             l=l^nums[i];
         }
