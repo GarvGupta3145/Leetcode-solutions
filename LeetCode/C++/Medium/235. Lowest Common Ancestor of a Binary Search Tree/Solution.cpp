@@ -18,14 +18,14 @@ public:
     }
     if(!found) return false;
 
-    if(root->val==target){ common=root; return true; }   // <-- added
+    if(root->val==target){ if(!common) common=root; return true; }   // <-- added
 
     bool lf=false,rf=false;
     lf=dfs(root->left,target);
     if(!lf && root->val<target){
         rf=dfs(root->right,target);
         if(rf){
-            common=root;
+            if(!common) common=root;
             return true;
         }
         return false;
@@ -50,7 +50,7 @@ public:
         int target= p->val>q->val ? p->val:q->val;
         sv=s->val;
         if(dfs(s->right,target))return s;
-        TreeNode*common=new TreeNode();
+        TreeNode* common = nullptr;
         bool sf=false;
         solve(root,sv,target,sf,common);
         return common;
