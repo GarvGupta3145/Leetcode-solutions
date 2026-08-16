@@ -11,27 +11,27 @@
 class Solution {
 public:
     bool solve(TreeNode*root,int sm,int target , bool &found,TreeNode* &common){
-        if(!found){
-            if(root->val<sm) solve(root->right,sm,target,found,common);
-            else if(root->val>sm) solve(root->left,sm,target,found,common);
-            else { 
-                found=true; 
-                return false; 
-            }
-        }
-        if(!found) return false;
-        bool lf=false,rf=false;
-        lf=dfs(root->left,target);
-        if(!lf){
-            rf=dfs(root->right,target);
-            if(rf || root->val==target){
-                common=root;
-                return true;
-            }
-            return false;
-        }
-        return true;
+    if(!found){
+        if(root->val<sm) solve(root->right,sm,target,found,common);
+        else if(root->val>sm) solve(root->left,sm,target,found,common);
+        else { found=true; return false; }
     }
+    if(!found) return false;
+
+    if(root->val==target){ common=root; return true; }   // <-- added
+
+    bool lf=false,rf=false;
+    lf=dfs(root->left,target);
+    if(!lf && root->val<target){
+        rf=dfs(root->right,target);
+        if(rf){
+            common=root;
+            return true;
+        }
+        return false;
+    }
+    return true;
+}
     bool dfs(TreeNode*root, int target){
         if(!root)return false;
         TreeNode * curr=root;
