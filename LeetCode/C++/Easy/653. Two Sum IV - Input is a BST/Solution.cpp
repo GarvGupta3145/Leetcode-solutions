@@ -1,14 +1,37 @@
 class Solution {
 public:
-    bool findTarget(TreeNode* root, int k) {
-        unordered_set<int> seen;
-        return solve(root, k, seen);
+    void pushLeft(stack<TreeNode*>& st, TreeNode* node) {
+        while(node) {
+            st.push(node);
+            node = node->left;
+        }
     }
 
-    bool solve(TreeNode* root, int k, unordered_set<int>& seen) {
-        if(!root) return false;
-        if(seen.count(k - root->val)) return true;
-        seen.insert(root->val);
-        return solve(root->left, k, seen) || solve(root->right, k, seen);
+    void pushRight(stack<TreeNode*>& st, TreeNode* node) {
+        while(node) {
+            st.push(node);
+            node = node->right;
+        }
+    }
+
+    bool findTarget(TreeNode* root, int k) {
+        stack<TreeNode*> lo, hi;
+        pushLeft(lo, root);
+        pushRight(hi, root);
+
+        while(lo.top() != hi.top()) {
+            int sum = lo.top()->val + hi.top()->val;
+            if(sum == k) return true;
+            else if(sum < k) {
+                TreeNode* curr = lo.top();
+                lo.pop();
+                if(curr->right) pushLeft(lo, curr->right);
+            } else {
+                TreeNode* curr = hi.top();
+                hi.pop();
+                if(curr->left) pushRight(hi, curr->left);
+            }
+        }
+        return false;
     }
 };
