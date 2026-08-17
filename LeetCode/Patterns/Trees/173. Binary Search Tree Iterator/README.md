@@ -8,8 +8,8 @@
 Stack, Tree, Design, Binary Search Tree, Binary Tree, Iterator
 
 ### 🚀 Performance
-- **Runtime:** N/A
-- **Memory:** N/A
+- **Runtime:** 6 ms
+- **Memory:** 31.9 MB
 
 ---
 
