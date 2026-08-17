@@ -8,8 +8,8 @@
 Hash Table, Two Pointers, Tree, Depth-First Search, Breadth-First Search, Binary Search Tree, Binary Tree
 
 ### 🚀 Performance
-- **Runtime:** 3 ms
-- **Memory:** 39 MB
+- **Runtime:** N/A
+- **Memory:** N/A
 
 ---
 
