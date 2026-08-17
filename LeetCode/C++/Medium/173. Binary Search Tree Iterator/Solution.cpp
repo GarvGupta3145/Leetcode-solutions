@@ -1,13 +1,14 @@
 /**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
- *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
- *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
- * };
+ // Approach:
+    // - Maintain a stack holding the path from root to current smallest unvisited node.
+    // - Constructor: push root, then keep pushing left children till null -> stack top = smallest val.
+    // - next(): pop top (this is the next in-order value).
+    //           if popped node has a right child, push that right child's leftmost path onto stack
+    //           (so the next smallest unvisited value ends up on top).
+    // - hasNext(): stack non-empty means there are still unvisited nodes.
+    // Time: next()/hasNext() -> O(1) amortized (each node pushed & popped once overall -> O(n) total over n calls)
+    // Space: O(h) -> stack holds at most one path root-to-leaf at a time
+
  */
 class BSTIterator {
 private:
