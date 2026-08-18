@@ -3,7 +3,7 @@
 Track your progress on the Grind 100 coding interview preparation list.
 
 ## Progress
-- **Completed:** 6 / 100 (6.0%)
+- **Completed:** 7 / 100 (7.0%)
 
 ---
 
@@ -62,7 +62,7 @@ Track your progress on the Grind 100 coding interview preparation list.
 - [ ] Diameter of Binary Tree
 - [x] [Binary Tree Inorder Traversal](./C++/Easy/94. Binary Tree Inorder Traversal/)
 - [ ] Binary Tree Level Order Traversal
-- [ ] Convert Sorted Array to Binary Search Tree
+- [x] [Convert Sorted Array to Binary Search Tree](./C++/Easy/108. Convert Sorted Array to Binary Search Tree/)
 - [x] [Validate Binary Search Tree](./C++/Medium/98. Validate Binary Search Tree/)
 - [ ] Lowest Common Ancestor of a Binary Tree
 - [x] [Kth Smallest Element in a BST](./C++/Medium/230. Kth Smallest Element in a BST/)
