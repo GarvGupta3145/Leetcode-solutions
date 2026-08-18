@@ -1,0 +1,44 @@
+# 📝 109. Convert Sorted List to Binary Search Tree (LeetCode)
+
+🔗 [Problem Link](https://leetcode.com/problems/convert-sorted-list-to-binary-search-tree/?envType=problem-list-v2&envId=binary-search-tree)
+
+![Difficulty](https://img.shields.io/badge/Difficulty-Medium-orange) ![Language](https://img.shields.io/badge/Language-C++-blue)
+
+### 💡 Tags
+Linked List, Divide and Conquer, Tree, Binary Search Tree, Binary Tree
+
+### 🚀 Performance
+- **Runtime:** N/A
+- **Memory:** N/A
+
+---
+
+### 📜 Problem Description
+
+Given the  `head`  of a singly linked list where elements are sorted in  **ascending order** , convert  *it to a*  ***height-balanced***   *binary search tree* .
+
+**Example 1:**
+
+ ![image](https://assets.leetcode.com/uploads/2020/08/17/linked.jpg) 
+
+```
+Input: head = [-10,-3,0,5,9]
+Output: [0,-3,9,-10,null,5]
+Explanation: One possible answer is [0,-3,9,-10,null,5], which represents the shown height balanced BST.
+
+```
+
+**Example 2:**
+
+```
+Input: head = []
+Output: []
+
+```
+
+**Constraints:**
+
+	
+- The number of nodes in  `head`  is in the range  `[0, 2 * 104]` .
+	
+- `-105 <= Node.val <= 105`
