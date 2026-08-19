@@ -1,6 +1,6 @@
 # 📝 538. Convert BST to Greater Tree (LeetCode)
 
-🔗 [Problem Link](https://leetcode.com/problems/convert-bst-to-greater-tree/?envType=problem-list-v2&envId=binary-search-tree)
+🔗 [Problem Link](https://leetcode.com/problems/convert-bst-to-greater-tree/)
 
 ![Difficulty](https://img.shields.io/badge/Difficulty-Medium-orange) ![Language](https://img.shields.io/badge/Language-C++-blue)
 
