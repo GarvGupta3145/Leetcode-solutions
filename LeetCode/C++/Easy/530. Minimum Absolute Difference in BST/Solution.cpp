@@ -26,6 +26,6 @@ public:
         TreeNode* prev=NULL;
         find(root,prev,mn);
         if(prev && root)mn=min(mn,root->val-prev->val);
-        return mn;
+        return mn;abs()
     }
 };
