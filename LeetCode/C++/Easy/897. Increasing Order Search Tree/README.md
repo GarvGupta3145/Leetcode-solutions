@@ -1,6 +1,6 @@
 # 📝 897. Increasing Order Search Tree (LeetCode)
 
-🔗 [Problem Link](https://leetcode.com/problems/increasing-order-search-tree)
+🔗 [Problem Link](https://leetcode.com/problems/increasing-order-search-tree/?envType=problem-list-v2&envId=binary-search-tree)
 
 ![Difficulty](https://img.shields.io/badge/Difficulty-Easy-brightgreen) ![Language](https://img.shields.io/badge/Language-C++-blue)
 
