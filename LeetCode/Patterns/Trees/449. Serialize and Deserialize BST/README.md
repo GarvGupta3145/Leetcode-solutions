@@ -1,6 +1,6 @@
 # 📝 449. Serialize and Deserialize BST (LeetCode)
 
-🔗 [Problem Link](https://leetcode.com/problems/serialize-and-deserialize-bst/?envType=problem-list-v2&envId=binary-search-tree)
+🔗 [Problem Link](https://leetcode.com/problems/serialize-and-deserialize-bst/)
 
 ![Difficulty](https://img.shields.io/badge/Difficulty-Medium-orange) ![Language](https://img.shields.io/badge/Language-C++-blue)
 
@@ -8,8 +8,8 @@
 String, Tree, Depth-First Search, Breadth-First Search, Design, Binary Search Tree, Binary Tree
 
 ### 🚀 Performance
-- **Runtime:** N/A
-- **Memory:** N/A
+- **Runtime:** 25 ms
+- **Memory:** 34.9 MB
 
 ---
 
