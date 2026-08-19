@@ -1,6 +1,6 @@
 # 📝 501. Find Mode in Binary Search Tree (LeetCode)
 
-🔗 [Problem Link](https://leetcode.com/problems/find-mode-in-binary-search-tree/?envType=problem-list-v2&envId=binary-search-tree)
+🔗 [Problem Link](https://leetcode.com/problems/find-mode-in-binary-search-tree/)
 
 ![Difficulty](https://img.shields.io/badge/Difficulty-Easy-brightgreen) ![Language](https://img.shields.io/badge/Language-C++-blue)
 
