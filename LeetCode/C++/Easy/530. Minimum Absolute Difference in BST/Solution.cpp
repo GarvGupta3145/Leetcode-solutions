@@ -11,7 +11,7 @@
  */
 class Solution {
 public:
-    void find(TreeNode* root, TreeNode* prev,int & mn){
+    void find(TreeNode* root, TreeNode* &prev,int & mn){
         if(!root)return;
         find(root->left,prev,mn);
         if(prev){
@@ -25,7 +25,6 @@ public:
         int mn=INT_MAX;
         TreeNode* prev=NULL;
         find(root,prev,mn);
-        if(prev && root)mn=min(mn,root->val-prev->val);
-        return mn;abs()
+        return mn;
     }
 };
