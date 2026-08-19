@@ -1,6 +1,6 @@
 # 📝 103. Binary Tree Zigzag Level Order Traversal (LeetCode)
 
-🔗 [Problem Link](https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/)
+🔗 [Problem Link](https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal)
 
 ![Difficulty](https://img.shields.io/badge/Difficulty-Medium-orange) ![Language](https://img.shields.io/badge/Language-C++-blue)
 
@@ -8,8 +8,8 @@
 Tree, Breadth-First Search, Binary Tree
 
 ### 🚀 Performance
-- **Runtime:** 1 ms
-- **Memory:** 15.2 MB
+- **Runtime:** N/A
+- **Memory:** N/A
 
 ---
 
