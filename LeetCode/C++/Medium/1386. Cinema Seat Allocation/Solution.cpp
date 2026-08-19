@@ -26,7 +26,7 @@ public:
                 c=false;
             }
             else count++;
-            if(c)count++;
+            if(b1)count++;
         }
         count+=(n-mp.size())*2;
         return count;
