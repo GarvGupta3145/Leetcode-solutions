@@ -15,18 +15,19 @@ public:
             }
             bool c=true;
             bool b1=true;
-            if(s[2]==-1 ||s[3]==-1 ||s[4]==-1 ||s[5]==-1){
-                if(s[4]==-1 || s[5]==-1)b1=false;
+            if(s[2]==0 && s[3]==0 &&s[4]==0 &&s[5]==0){
+                count++;
+                b1=false;
+            }
+            if(s[4]==0 && s[5]==0 && s[6]==0 &&s[7]==0){
                 c=false;
             }
-            else count++;
             bool b2=true;
-            if(s[6]==-1|| s[7]==-1 ||s[8]==-1 ||s[9]==-1){
-                if(s[6]==-1 || s[7]==-1)b2=false;
-                c=false;
+            if(s[6]==0&& s[7]==0&&s[8]==0&&s[9]==0){
+                count++;
+                b2=false;
             }
-            else count++;
-            if(c)count++;
+            if(b1 && b2 && !c)count++;
         }
         count+=(n-mp.size())*2;
         return count;
