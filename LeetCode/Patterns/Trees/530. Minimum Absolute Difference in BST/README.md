@@ -1,6 +1,6 @@
 # 📝 530. Minimum Absolute Difference in BST (LeetCode)
 
-🔗 [Problem Link](https://leetcode.com/problems/minimum-absolute-difference-in-bst)
+🔗 [Problem Link](https://leetcode.com/problems/minimum-absolute-difference-in-bst/?envType=problem-list-v2&envId=binary-search-tree)
 
 ![Difficulty](https://img.shields.io/badge/Difficulty-Easy-brightgreen) ![Language](https://img.shields.io/badge/Language-C++-blue)
 
