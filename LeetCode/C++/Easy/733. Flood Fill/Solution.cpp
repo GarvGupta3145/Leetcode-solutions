@@ -30,7 +30,7 @@ public:
                 }
                 if(r<n && image[row][r]==st){
                     image[row][r]=color;
-                    q.push({row,b});
+                    q.push({row,r});
                 }
             }
             
