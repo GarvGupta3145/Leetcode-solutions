@@ -12,7 +12,7 @@ public:
         }
 
         for (; i < n && nums[i] <= upper; i++) {
-            if (cur >= nums[i]) continue;
+            if (cur == nums[i]) continue;
             else if (cur + 1 == nums[i]) {
                 cur = nums[i];
                 continue;
