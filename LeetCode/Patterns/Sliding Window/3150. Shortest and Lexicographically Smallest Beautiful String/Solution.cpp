@@ -22,7 +22,15 @@ public:
                     }
                     else if(nm==r-l+1){
                         string t=s.substr(l,r-l+1);
-                        if(t < st) st = t;
+                        int end=t.size();
+                        while(end>=0){
+                            if(st[end]==t[end])end--;
+                            else if(st[end]==0){
+                                st=s.substr(l,r-l+1);
+                                break;
+                            }
+                            else break;
+                        }
                         nm=r-l+1;
                     }
                     count-=1;
