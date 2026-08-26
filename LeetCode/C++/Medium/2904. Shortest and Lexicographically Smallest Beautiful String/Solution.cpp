@@ -16,7 +16,7 @@ public:
             if(s[r]=='1'){
                 count++;
                 if(count==k){
-                    if(nm>=r-l+1){
+                    if(nm=r-l+1){
                         st=s.substr(l,r-l+1);
                         nm=r-l+1;
                     }
