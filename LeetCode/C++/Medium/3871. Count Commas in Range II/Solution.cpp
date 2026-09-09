@@ -20,7 +20,7 @@ public:
         while(i<count){
             if(count-i>3){
                 //1,112,112 c=7
-                ans+=(pow(10,i+3)-pow(10,i))*j;
+                ans+=(pow(10,i+3)-pow(10,i))*j+1;
                 j++;
                 i+=3;
                 //j=2,i=6
@@ -30,6 +30,7 @@ public:
                 break;
              }
         }
+        //999,000
         return ans+1;
     }
 };
