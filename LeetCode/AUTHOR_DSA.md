@@ -163,7 +163,7 @@ Track your progress on the Curated 100hrs DSA core interview preparation list.
 
 ### 📂 PART  1: STRING BASICS & CHARACTER MANIP
 - [ ] Defanging an IP Address
-- [x] [Score of a String](./C++/Easy/3110. Score of a String/)
+- [x] [Score of a String](./C++/Easy/3379. Score of a String/)
 - [ ] Reverse String
 - [ ] Truncate Sentence
 - [ ] To Lower Case
