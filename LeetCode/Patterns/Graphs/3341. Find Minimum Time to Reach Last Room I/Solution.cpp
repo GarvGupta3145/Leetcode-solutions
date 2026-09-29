@@ -18,8 +18,8 @@ public:
                 int nx=i+dx[d];
                 int ny=j+dy[d];
                 if(nx>=0 && ny>=0 && nx<n && ny<m && time+1<mn[nx][ny]){
-                    if(moveTime[nx][ny]<=time)pq.push({time+1,nx,ny});
-                    else pq.push({moveTime[nx][ny]+1,nx,ny});
+                    int nt = max(time, moveTime[nx][ny]) + 1;
+                    if(nt < mn[nx][ny]) pq.push({nt, nx, ny});
                 }
             }
 
