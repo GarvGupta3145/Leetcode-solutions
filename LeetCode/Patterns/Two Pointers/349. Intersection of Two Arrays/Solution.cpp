@@ -1,9 +1,16 @@
 class Solution {
 public:
     vector<int> intersection(vector<int>& nums1, vector<int>& nums2) {
-        unordered_set<int> s1(nums1.begin(), nums1.end()), ans;
-        for (int x : nums2)
-            if (s1.count(x)) ans.insert(x);
-        return vector<int>(ans.begin(), ans.end());
+        vector<bool> seen(1001, false);
+        for (int x : nums1) seen[x] = true;
+
+        vector<int> res;
+        for (int x : nums2) {
+            if (seen[x]) {
+                res.push_back(x);
+                seen[x] = false; // so it's added only once
+            }
+        }
+        return res;
     }
 };
