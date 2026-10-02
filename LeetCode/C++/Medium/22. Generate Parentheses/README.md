@@ -8,8 +8,8 @@
 String, Dynamic Programming, Backtracking, Bracket Sequences
 
 ### 🚀 Performance
-- **Runtime:** 3 ms
-- **Memory:** 15.6 MB
+- **Runtime:** N/A
+- **Memory:** N/A
 
 ---
 
