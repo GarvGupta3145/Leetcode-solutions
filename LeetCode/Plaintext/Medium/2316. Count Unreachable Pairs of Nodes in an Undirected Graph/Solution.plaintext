@@ -1,0 +1,21 @@
+                int v=0;
+                q.push(i);
+                while(!q.empty()){
+                    int node=q.front();
+            if(!visited[i]){
+                visited[i]=true;
+        for(int i=0;i<n;i++){
+                    q.pop();
+                    v++;
+                    for(auto nei:adj[node]){
+                        if(!visited[nei]){
+                            visited[nei]=true;
+                            q.push(nei);
+                        }
+                    }
+                }
+                pairs+=(n-v)*v;
+            }
+        }
+        return pairs/2;
+    }
