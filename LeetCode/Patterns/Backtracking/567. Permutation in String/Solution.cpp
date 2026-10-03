@@ -8,9 +8,7 @@ public:
         for(auto it:s1){
             mpp[it]++;
         }
-        int unique=mpp.size();
         int l=0,r=0;
-        int n=0;
         while(l<=r && r<n2){
             if(mpp.find(s2[r])==mpp.end()){
                 while(l!=r){
