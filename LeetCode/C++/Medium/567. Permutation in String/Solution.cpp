@@ -10,7 +10,7 @@ public:
         }
         int l=0,r=0;
         while(l<=r && r<n2){
-            if(mpp.find(s2[r])==mpp.end()){
+            if(mpp.find(s2[r])==mpp.end() || mpp[s2[r]]>0){
                 while(l!=r){
                     mpp[s2[l]]++;
                     l++;
