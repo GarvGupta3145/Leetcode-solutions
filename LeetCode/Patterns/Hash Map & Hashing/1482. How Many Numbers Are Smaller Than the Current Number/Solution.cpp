@@ -1,7 +1,7 @@
 class Solution {
 public:
     vector<int> smallerNumbersThanCurrent(vector<int>& nums) {
-        vector<int>freq(100,0);
+        vector<int>freq(101,0);
         unordered_map<int,vector<int>>mpp;
         for(int i=0;i<nums.size();i++){
             freq[nums[i]]++;
