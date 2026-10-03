@@ -27,7 +27,7 @@ public:
                         }
                     }
                 }
-                pairs+=(n-v)*v;
+                pairs+=(long long)(n-v)*v;
             }
         }
         return pairs/2;
