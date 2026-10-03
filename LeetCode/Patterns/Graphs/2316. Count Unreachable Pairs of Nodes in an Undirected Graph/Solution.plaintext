@@ -1,21 +1,20 @@
-                    int node=q.front();
-                while(!q.empty()){
                 q.push(i);
                 visited[i]=true;
-                int v=0;
-            if(!visited[i]){
-        for(int i=0;i<n;i++){
-        queue<int>q;
-        lpairs=0;
-        vector<int>visited(n,false);
-        }
-            adj[v].push_back(u);
-            adj[u].push_back(v);
-            int v=edges[i][1];
-            int u=edges[i][0];
+                while(!q.empty()){
+                    int node=q.front();
                     q.pop();
                     v++;
                     for(auto nei:adj[node]){
                         if(!visited[nei]){
                             visited[nei]=true;
                             q.push(nei);
+                        }
+                    }
+                }
+                pairs+=(n-v)*v;
+            }
+        }
+        return pairs/2;
+                int v=0;
+    }
+};
