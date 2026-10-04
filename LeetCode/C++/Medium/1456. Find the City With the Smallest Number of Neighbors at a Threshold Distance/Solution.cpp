@@ -2,45 +2,42 @@ class Solution {
 public:
     int findTheCity(int n, vector<vector<int>>& edges, int distanceThreshold) {
         const int INF = 1e9;
-        
 
-        vector<vector<int>>dist(n,vector<int>(n,INF));
-        for (int i = 0; i < n; i++) dist[i][i] = 0;
-        
+        vector<vector<pair<int,int>>> adj(n);
         for (auto& e : edges) {
             int u = e[0], v = e[1], w = e[2];
-            dist[u][v] = min(dist[u][v], w);
-            dist[v][u] = dist[u][v];
+            adj[u].push_back({v, w});
+            adj[v].push_back({u, w});
         }
 
-        for (int k = 0; k < n; k++){
-            for (int i = 0; i < n; i++){
-                for (int j = 0; j < n; j++){
-                    if (dist[i][k] != INF && dist[k][j] != INF){
-                        dist[i][j] = min(dist[i][j], dist[i][k] + dist[k][j]);
-                    }    
-                }                    
-            }                
-        }
+        int small = n, city = -1;
+        for (int src = 0; src < n; src++) {
+            vector<int> dist(n, INF);
+            priority_queue<pair<int,int>, vector<pair<int,int>>, greater<>> pq;
+            dist[src] = 0;
+            pq.push({0, src});
 
-
-        int small=n;
-        int ans=-1;
-        for(int i=0;i<n;i++){
-            int count=0;
-            for(int j=0;j<n;j++){
-                if(i==j)continue;
-                if(dist[i][j]<=distanceThreshold){
-                    count++;
+            while (!pq.empty()) {
+                auto [d, u] = pq.top();
+                pq.pop();
+                if (d > dist[u]) continue;
+                for (auto [v, w] : adj[u]) {
+                    if (d + w < dist[v]) {
+                        dist[v] = d + w;
+                        pq.push({dist[v], v});
+                    }
                 }
             }
-            if(count<small){
-                small=count;
-                ans=i;
-            }
-            else if(count==small)ans=i;
-        }
 
-        return ans;       
+            int count = 0;
+            for (int j = 0; j < n; j++)
+                if (j != src && dist[j] <= distanceThreshold) count++;
+
+            if (count <= small) {
+                small = count;
+                city = src;
+            }
+        }
+        return city;
     }
 };
