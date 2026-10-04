@@ -8,8 +8,8 @@
 Array, Binary Search, Depth-First Search, Breadth-First Search, Union-Find, Minimax, Heap (Priority Queue), Matrix, Dijkstra's Algorithm
 
 ### 🚀 Performance
-- **Runtime:** 11 ms
-- **Memory:** 13.8 MB
+- **Runtime:** N/A
+- **Memory:** N/A
 
 ---
 

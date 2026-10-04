@@ -18,13 +18,10 @@ public:
                 int nx=i+dx[d];
                 int ny=j+dy[d];
                 if(nx>=0 && ny>=0 && nx<n && ny<n){
-                    if(grid[nx][ny]<=t && t<dist[nx][ny]){
-                        pq.push({t,nx,ny});
-                        dist[nx][ny]=t;
-                    }
-                    else if(grid[nx][ny]>t && dist[nx][ny]==INT_MAX){
-                        pq.push({grid[nx][ny],nx,ny});
-                        dist[nx][ny]=grid[nx][ny];
+                    int nt=max(t,grid[nx][ny]);
+                    if(nt<dist[nx][ny]){
+                        dist[nx][ny]=nt;
+                        pq.push({nt,nx,ny});
                     }
                 }
             }
