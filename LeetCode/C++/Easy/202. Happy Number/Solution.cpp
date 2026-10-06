@@ -1,22 +1,24 @@
 class Solution {
+private:
+    int getnext(int n){
+        int totalSum = 0;
+        while(n>0){
+            int d = n%10;
+            totalSum+=d*d;
+            n/=10;
+        }
+        return totalSum;
+    }
 public:
     bool isHappy(int n) {
-        unordered_set<int>s;
-        while(true){
-            int a =n;
-            int sum=0;
-            while(a){
-                int d=a%10;
-                sum+=(d*d);
-                a/=10;
-            }
-            if(sum==1)return true;
-            if(s.count(sum))return false;
-            else{
-                s.insert(sum);
-                n=sum;
-            }
+        // unordered_set<int>seen;
+        int slow = n;
+        int fast = getnext(n);
+        // using tortoise hare algorithm
+        while(fast!=1 && slow!=fast){
+            slow = getnext(slow);
+            fast = getnext(getnext(fast));
         }
-        return false;
+        return fast==1;
     }
 };
