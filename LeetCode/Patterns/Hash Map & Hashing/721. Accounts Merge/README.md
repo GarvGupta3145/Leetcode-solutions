@@ -8,8 +8,8 @@
 Array, Hash Table, String, Depth-First Search, Breadth-First Search, Union-Find, Sorting
 
 ### 🚀 Performance
-- **Runtime:** N/A
-- **Memory:** N/A
+- **Runtime:** 100 ms
+- **Memory:** 50.3 MB
 
 ---
 
