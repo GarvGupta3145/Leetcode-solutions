@@ -8,8 +8,8 @@
 Hash Table, Depth-First Search, Union-Find, Graph Theory, Bipartite Graph
 
 ### 🚀 Performance
-- **Runtime:** 86 ms
-- **Memory:** 18.1 MB
+- **Runtime:** 11 ms
+- **Memory:** 33.8 MB
 
 ---
 
