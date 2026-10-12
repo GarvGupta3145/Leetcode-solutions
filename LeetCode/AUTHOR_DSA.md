@@ -3,7 +3,7 @@
 Track your progress on the Curated 100hrs DSA core interview preparation list.
 
 ## Progress
-- **Completed:** 4 / 238 (1.7%)
+- **Completed:** 6 / 238 (2.5%)
 
 ---
 
@@ -261,7 +261,7 @@ Track your progress on the Curated 100hrs DSA core interview preparation list.
 - [ ] Maximum Sum Submatrix
 - [ ] Count Submatrices with All Ones
 - [ ] Square Submatrices with All Ones
-- [ ] Number of Islands
+- [x] [Number of Islands](./C++/Medium/200. Number of Islands/)
 
 ### 📂 PART  4: PATTERN GENERATION & SPECIAL MA
 - [ ] Spiral Matrix Generation
@@ -270,7 +270,7 @@ Track your progress on the Curated 100hrs DSA core interview preparation list.
 - [ ] brute force
 - [ ] Count Submatrices with All Ones
 - [ ] Maximal Rectangle
-- [ ] Number of Islands
+- [x] [Number of Islands](./C++/Medium/200. Number of Islands/)
 
 ### 📂 PART  1: LINKED LISTS Topics Covered: 1.
 - [ ] Middle of the Linked List
