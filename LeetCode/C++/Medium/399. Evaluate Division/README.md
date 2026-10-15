@@ -8,8 +8,8 @@
 Array, String, Depth-First Search, Breadth-First Search, Union-Find, Graph Theory, Shortest Path, Bellman–Ford Algorithm, Floyd–Warshall Algorithm
 
 ### 🚀 Performance
-- **Runtime:** 0 ms
-- **Memory:** 11.7 MB
+- **Runtime:** N/A
+- **Memory:** N/A
 
 ---
 
