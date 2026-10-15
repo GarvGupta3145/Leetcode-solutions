@@ -8,8 +8,8 @@
 Array, Hash Table, Depth-First Search, Breadth-First Search, Union-Find, Matrix, Planar Graph
 
 ### 🚀 Performance
-- **Runtime:** 1 ms
-- **Memory:** 12.3 MB
+- **Runtime:** N/A
+- **Memory:** N/A
 
 ---
 
