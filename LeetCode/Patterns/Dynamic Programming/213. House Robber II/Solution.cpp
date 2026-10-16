@@ -19,6 +19,6 @@ public:
             nprev2=nprev1;
             nprev1=m2;
         }
-        return max(nprev);
+        return max(nprev1,prev1);
     }
 };
