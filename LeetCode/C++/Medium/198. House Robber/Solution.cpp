@@ -10,6 +10,6 @@ public:
             prev1=m;
             
         }
-        return m;
+        return prev1;
     }
 };
