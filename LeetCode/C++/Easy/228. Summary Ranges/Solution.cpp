@@ -11,10 +11,10 @@ public:
                 j++;
             }
             string s;
-            s.push_back(l+'0');
+            s+=to_string(l);
             if(l<nums[j-1]){
                 s+="->";
-                s.push_back(nums[j-1]+'0');
+                s+=to_string(nums[j-1]);
             }
             ans.push_back(s);
             i=j-1;
