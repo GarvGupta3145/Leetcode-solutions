@@ -1,6 +1,6 @@
 # 📝 275. H-Index II (LeetCode)
 
-🔗 [Problem Link](https://leetcode.com/problems/h-index-ii/)
+🔗 [Problem Link](https://leetcode.com/problems/h-index-ii)
 
 ![Difficulty](https://img.shields.io/badge/Difficulty-Medium-orange) ![Language](https://img.shields.io/badge/Language-C++-blue)
 
@@ -8,8 +8,8 @@
 Array, Binary Search
 
 ### 🚀 Performance
-- **Runtime:** 0 ms
-- **Memory:** 22.4 MB
+- **Runtime:** N/A
+- **Memory:** N/A
 
 ---
 
