@@ -8,8 +8,8 @@
 Hash Table, Depth-First Search, Breadth-First Search, Graph Theory
 
 ### 🚀 Performance
-- **Runtime:** N/A
-- **Memory:** N/A
+- **Runtime:** 3 ms
+- **Memory:** 11.8 MB
 
 ---
 
