@@ -36,30 +36,30 @@ public:
     // }
 
     //Space Optimization(2 Array)
-    int uniquePathsWithObstacles(vector<vector<int>>& obstacleGrid){
-        int m=obstacleGrid.size();
-        int n=obstacleGrid[0].size();
-        vector<int>upper(n,0);
-        if(obstacleGrid[0][0]==1 || obstacleGrid[m-1][n-1]==1)return 0;
-        if(m==1 && n==1 && obstacleGrid[0][0]==0)return 1;
-        for(int i=0;i<m;i++){
-            vector<int>same(n,0);
-            for(int j=0;j<n;j++){
-                if(i==0 && j==0)continue;
-                if(obstacleGrid[i][j]==1)continue;
-                int left=0,up=0;
-                if(i==0 && j-1==0)left=1;
-                else if(j-1>=0)left=same[j-1];
+    // int uniquePathsWithObstacles(vector<vector<int>>& obstacleGrid){
+    //     int m=obstacleGrid.size();
+    //     int n=obstacleGrid[0].size();
+    //     vector<int>upper(n,0);
+    //     if(obstacleGrid[0][0]==1 || obstacleGrid[m-1][n-1]==1)return 0;
+    //     if(m==1 && n==1 && obstacleGrid[0][0]==0)return 1;
+    //     for(int i=0;i<m;i++){
+    //         vector<int>same(n,0);
+    //         for(int j=0;j<n;j++){
+    //             if(i==0 && j==0)continue;
+    //             if(obstacleGrid[i][j]==1)continue;
+    //             int left=0,up=0;
+    //             if(i==0 && j-1==0)left=1;
+    //             else if(j-1>=0)left=same[j-1];
 
-                if(i==1 && j==0)up=1;
-                else if(i-1>=0)up=upper[j];
+    //             if(i==1 && j==0)up=1;
+    //             else if(i-1>=0)up=upper[j];
 
-                same[j]=left+up;
-            }
-            upper=same;
-        }
-        return (m-1>=0 && n-1>=0)?upper[n-1]:0;
-    }
+    //             same[j]=left+up;
+    //         }
+    //         upper=same;
+    //     }
+    //     return (m-1>=0 && n-1>=0)?upper[n-1]:0;
+    // }
      
     //Space Optimization(1 Array)
     int uniquePathsWithObstacles(vector<vector<int>>& obstacleGrid) {
