@@ -1,6 +1,6 @@
 # 📝 63. Unique Paths II (LeetCode)
 
-🔗 [Problem Link](https://leetcode.com/problems/unique-paths-ii)
+🔗 [Problem Link](https://leetcode.com/problems/unique-paths-ii/)
 
 ![Difficulty](https://img.shields.io/badge/Difficulty-Medium-orange) ![Language](https://img.shields.io/badge/Language-C++-blue)
 
@@ -8,8 +8,8 @@
 Array, Dynamic Programming, Matrix
 
 ### 🚀 Performance
-- **Runtime:** N/A
-- **Memory:** N/A
+- **Runtime:** 1 ms
+- **Memory:** 11.9 MB
 
 ---
 
