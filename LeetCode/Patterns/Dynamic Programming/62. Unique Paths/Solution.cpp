@@ -16,17 +16,35 @@ public:
     // }
 
     // Tabulation 
+    // int uniquePaths(int m,int n){
+    //     vector<vector<int>> dp(m,vector<int>(n,-1));
+    //     dp[0][0]=1;
+    //     for(int i=0;i<m;i++){
+    //         for(int j=0;j<n;j++){
+    //             if(i==0 && j==0)continue;
+    //             int p1=j-1>=0?dp[i][j-1]:0;
+    //             int p2=i-1>=0?dp[i-1][j]:0;
+    //             dp[i][j]=p1+p2;
+    //         }
+    //     }
+    //     return dp[m-1][n-1];
+    // }
+
+    //Space optimization
     int uniquePaths(int m,int n){
-        vector<vector<int>> dp(m,vector<int>(n,-1));
-        dp[0][0]=1;
+        vector<int>upper(n,0);
         for(int i=0;i<m;i++){
+            vector<int>same(n,0);
+            same[0]=1;
             for(int j=0;j<n;j++){
                 if(i==0 && j==0)continue;
-                int p1=j-1>=0?dp[i][j-1]:0;
-                int p2=i-1>=0?dp[i-1][j]:0;
-                dp[i][j]=p1+p2;
+                int p1=i-1>=0?upper[j]:0;
+                int p2=j-1>=0?same[j-1]:0;
+                same[j]=p1+p2;
             }
+            upper=same;
         }
-        return dp[m-1][n-1];
+        return upper[n-1];
+
     }
 };
