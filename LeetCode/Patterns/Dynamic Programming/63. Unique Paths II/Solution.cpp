@@ -16,16 +16,15 @@ public:
 
     //Tabulation
     int uniquePathsWithObstacles(vector<vector<int>>& obstacleGrid){
-        vector<vector<int>>dp(obstacleGrid.size(),vector<int>(obstacleGrid[0].size(),-1));
+        vector<vector<int>>dp(obstacleGrid.size(),vector<int>(obstacleGrid[0].size(),0));
         dp[0][0]=1;
         int m=obstacleGrid.size();
         int n=obstacleGrid[0].size();
-        if(obstacleGrid[m-1][n-1]==1)return 0;
+        if(obstacleGrid[m-1][n-1]==1||obstacleGrid[0][0]==1)return 0;
         for(int i=0;i<obstacleGrid.size();i++){
             for(int j=0;j<obstacleGrid[0].size();j++){
                 if(i==0 && j==0)continue;
                 if(obstacleGrid[i][j]==1){
-                    dp[i][j]=0;
                     continue;
                 }
                 int left=j-1>=0?dp[i][j-1]:0;
