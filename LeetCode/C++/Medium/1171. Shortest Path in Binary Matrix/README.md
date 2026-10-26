@@ -8,7 +8,7 @@
 Array, Breadth-First Search, Matrix
 
 ### 🚀 Performance
-- **Runtime:** 16 ms
+- **Runtime:** 15 ms
 - **Memory:** 25.4 MB
 
 ---
