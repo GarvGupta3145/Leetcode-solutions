@@ -11,7 +11,7 @@ public:
         for(int i=0;i<n;i++){
             for(int j=0;j<m;j++){
                 if(grid[i][j]>0 && visited[i][j]==-1){
-                    int sum=0;
+                    lo sum=0;
                     q.push({i,j});
                     visited[i][j]=true;
                     while(!q.empty()){
