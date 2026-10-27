@@ -17,7 +17,7 @@ public:
         while(temp->next){
             int val=temp->val;
             if(val==temp->next->val){
-                while(temp->next temp->next->val==val){
+                while(temp->next  && temp->next->val==val){
                     ListNode*del=temp->next;
                     temp->next=del->next;
                     delete del;
