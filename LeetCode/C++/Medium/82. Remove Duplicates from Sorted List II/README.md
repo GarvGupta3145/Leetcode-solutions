@@ -8,7 +8,7 @@
 Linked List, Two Pointers
 
 ### 🚀 Performance
-- **Runtime:** Successfully Evaluated
+- **Runtime:** N/A
 - **Memory:** N/A
 
 ---
