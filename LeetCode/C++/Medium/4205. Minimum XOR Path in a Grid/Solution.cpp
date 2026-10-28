@@ -1,22 +1,24 @@
 class Solution {
 public:
-    // Tabulation
     int minCost(vector<vector<int>>& grid) {
-        int m=grid.size();
-        int n=grid[0].size();
-        vector<vector<int>>dp(m,vector<int>(n,0));
-        dp[0]=grid[0];
-        for(int i=0;i<m;i++){
-            for(int j=0;j<n;j++){
-                if(i==0 && j==0)continue;
-                int best;
-                int left,up;
-                left= j==0?INT_MAX:dp[i][j-1];
-                up=i==0?INT_MAX:dp[i-1][j];
-                best=min(left,up);
-                dp[i][j]=min(grid[i][j]^up,grid[i][j]^left);
+        int m = grid.size(), n = grid[0].size();
+        vector<vector<bitset<1024>>> dp(m, vector<bitset<1024>>(n));
+
+        dp[0][0][grid[0][0]] = 1;
+
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                if (i == 0 && j == 0) continue;
+                int v = grid[i][j];
+                for (int x = 0; x < 1024; x++) {
+                    bool ok = (i > 0 && dp[i-1][j][x]) || (j > 0 && dp[i][j-1][x]);
+                    if (ok) dp[i][j][x ^ v] = 1;
+                }
             }
         }
-        return dp[m-1][n-1];
+
+        for (int x = 0; x < 1024; x++)
+            if (dp[m-1][n-1][x]) return x;
+        return -1;
     }
 };
