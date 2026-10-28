@@ -14,7 +14,7 @@ public:
                 left= j==0?INT_MAX:dp[i][j-1];
                 up=i==0?INT_MAX:dp[i-1][j];
                 best=min(left,up);
-                dp[i][j]=min
+                dp[i][j]=min(grid[i][j]^up,grid[i][j]^left);
             }
         }
         return dp[m-1][n-1];
