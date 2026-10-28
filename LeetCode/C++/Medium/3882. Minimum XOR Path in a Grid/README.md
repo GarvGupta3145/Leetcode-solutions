@@ -1,6 +1,6 @@
 # 📝 3882. Minimum XOR Path in a Grid (LeetCode)
 
-🔗 [Problem Link](https://leetcode.com/problems/minimum-xor-path-in-a-grid/?envType=daily-question&envId=2026-10-28)
+🔗 [Problem Link](https://leetcode.com/problems/minimum-xor-path-in-a-grid)
 
 ![Difficulty](https://img.shields.io/badge/Difficulty-Medium-orange) ![Language](https://img.shields.io/badge/Language-C++-blue)
 
