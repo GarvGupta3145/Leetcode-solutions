@@ -1,6 +1,6 @@
 # 📝 319. Bulb Switcher (LeetCode)
 
-🔗 [Problem Link](https://leetcode.com/problems/bulb-switcher/)
+🔗 [Problem Link](https://leetcode.com/problems/bulb-switcher)
 
 ![Difficulty](https://img.shields.io/badge/Difficulty-Medium-orange) ![Language](https://img.shields.io/badge/Language-C++-blue)
 
