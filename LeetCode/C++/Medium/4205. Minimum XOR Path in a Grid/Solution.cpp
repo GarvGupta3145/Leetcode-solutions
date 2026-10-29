@@ -3,27 +3,24 @@ public:
     int minCost(vector<vector<int>>& grid) {
         int m=grid.size();
         int n=grid[0].size();
-        vector<vector<unordered_set<int>>> dp(m, vector<unordered_set<int>>(n));
-        dp[0][0].insert(grid[0][0]);
-        for(int i=0;i<m;i++){
-            for(int j=0;j<n;j++){
-                if(i==0 && j==0)continue;
-                if(j>0){
-                    for(auto it:dp[i][j-1]){
-                        dp[i][j].insert(it^grid[i][j]);
-                    }
-                }
-                if(i>0){
-                    for(auto it:dp[i-1][j]){
-                        dp[i][j].insert(it^grid[i][j]);
-                    }
-                }
+        vector<unordered_set<int>> dp(n);
+        dp[0].insert(grid[0][0]);
+        for(int j=1;j<n;j++){
+            for(int x:dp[j-1]) dp[j].insert(x^grid[0][j]);
+        }
+        for(int i=1;i<m;i++){
+            unordered_set<int> cur;
+            for(int x:dp[0]) cur.insert(x^grid[i][0]);
+            dp[0]=move(cur);  // avoids an O(size) copy
+            for(int j=1;j<n;j++){
+                unordered_set<int> cur;
+                for(int x:dp[j])   cur.insert(x^grid[i][j]);  
+                for(int x:dp[j-1]) cur.insert(x^grid[i][j]);
+                dp[j]=move(cur);  // avoids an O(size) copy
             }
         }
         int mn=INT_MAX;
-        for(auto it:dp[m-1][n-1]){
-            mn=min(mn,it);
-        }
+        for(int x:dp[n-1]) mn=min(mn,x);
         return mn;
     }
 };
