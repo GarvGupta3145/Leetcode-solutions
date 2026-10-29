@@ -1,26 +1,26 @@
 class Solution {
 public:
     int minCost(vector<vector<int>>& grid) {
-        int m=grid.size();
-        int n=grid[0].size();
-        vector<unordered_set<int>> dp(n);
-        dp[0].insert(grid[0][0]);
+        int m=grid.size(), n=grid[0].size();
+        vector<bitset<1024>> dp(n);
+        dp[0][grid[0][0]]=1;
         for(int j=1;j<n;j++){
-            for(int x:dp[j-1]) dp[j].insert(x^grid[0][j]);
+            for(int x=0;x<1024;x++)
+                if(dp[j-1][x]) dp[j][x^grid[0][j]]=1;
         }
         for(int i=1;i<m;i++){
-            unordered_set<int> cur;
-            for(int x:dp[0]) cur.insert(x^grid[i][0]);
-            dp[0]=move(cur);  // avoids an O(size) copy
+            bitset<1024> cur;
+            for(int x=0;x<1024;x++)
+                if(dp[0][x]) cur[x^grid[i][0]]=1;
+            dp[0]=cur;
             for(int j=1;j<n;j++){
-                unordered_set<int> cur;
-                for(int x:dp[j])   cur.insert(x^grid[i][j]);  
-                for(int x:dp[j-1]) cur.insert(x^grid[i][j]);
-                dp[j]=move(cur);  // avoids an O(size) copy
+                bitset<1024> src=dp[j]|dp[j-1];   // merge top + left in one op
+                bitset<1024> cur;
+                for(int x=0;x<1024;x++)
+                    if(src[x]) cur[x^grid[i][j]]=1;  // remap by XOR with the cell
+                dp[j]=cur;
             }
         }
-        int mn=INT_MAX;
-        for(int x:dp[n-1]) mn=min(mn,x);
-        return mn;
+        return dp[n-1]._Find_first();  // lowest set bit = minimum value (GCC)
     }
 };
