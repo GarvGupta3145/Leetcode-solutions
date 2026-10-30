@@ -1,6 +1,6 @@
 # 📝 86. Partition List (LeetCode)
 
-🔗 [Problem Link](https://leetcode.com/problems/partition-list/)
+🔗 [Problem Link](https://leetcode.com/problems/partition-list/?envType=problem-list-v2&envId=linked-list)
 
 ![Difficulty](https://img.shields.io/badge/Difficulty-Medium-orange) ![Language](https://img.shields.io/badge/Language-C++-blue)
 

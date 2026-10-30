@@ -18,6 +18,7 @@ public:
             prev=curr;
             curr=curr->next;
         }
+        
         ListNode*temp=curr->next;
         ListNode*back=curr;
         while(temp){
