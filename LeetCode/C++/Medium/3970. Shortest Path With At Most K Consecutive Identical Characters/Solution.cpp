@@ -30,7 +30,7 @@ public:
                 }
                 else if(c!=l){
                         if(cost+wt < mcost[nei][1]){
-                            q.push({cost+wt,nei,c,1});
+                            q.push({cost+wt,nei,l,1});
                             mcost[nei][1]=cost+wt;
                         }
                     }
