@@ -17,7 +17,6 @@ public:
                         t--;
                     }
                     l++;
-                    ct--;
                 }
             }
             mnt=max(mnt,r-l+1);
@@ -36,7 +35,6 @@ public:
                         f--;
                     }
                     l++;
-                    cf--;
                 }
             }
             mnf=max(mnf,r-l+1);
