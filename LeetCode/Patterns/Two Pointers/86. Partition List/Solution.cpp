@@ -18,7 +18,7 @@ public:
             prev=curr;
             curr=curr->next;
         }
-        
+        if(!curr)return head;
         ListNode*temp=curr->next;
         ListNode*back=curr;
         while(temp){
