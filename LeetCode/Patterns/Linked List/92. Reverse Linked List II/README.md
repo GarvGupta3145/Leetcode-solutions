@@ -1,6 +1,6 @@
 # 📝 92. Reverse Linked List II (LeetCode)
 
-🔗 [Problem Link](https://leetcode.com/problems/reverse-linked-list-ii/?envType=problem-list-v2&envId=linked-list)
+🔗 [Problem Link](https://leetcode.com/problems/reverse-linked-list-ii/)
 
 ![Difficulty](https://img.shields.io/badge/Difficulty-Medium-orange) ![Language](https://img.shields.io/badge/Language-C++-blue)
 
