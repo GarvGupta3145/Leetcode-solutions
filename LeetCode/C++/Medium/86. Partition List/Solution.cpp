@@ -14,7 +14,7 @@ public:
         if(!head || ! head->next)return head;
         ListNode*prev=nullptr;
         ListNode*curr=head;
-        while(curr->val <x){
+        while(curcurr->val <x){
             prev=curr;
             curr=curr->next;
         }
