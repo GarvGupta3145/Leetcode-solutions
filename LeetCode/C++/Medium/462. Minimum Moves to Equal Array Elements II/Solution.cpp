@@ -6,14 +6,26 @@ public:
 
 
     int minMoves2(vector<int>& nums) {
+        // sort(nums.begin(),nums.end());
+        // int n=nums.size();
+        // int mid=nums[n/2];
+        // int ans=0;
+        // for(int i=0;i<n;i++){
+        //     ans+=abs(mid-nums[i]);
+        // }
+        // return ans;
+
+
         sort(nums.begin(),nums.end());
-        int n=nums.size();
-        int mid=nums[n/2];
         int ans=0;
-        for(int i=0;i<n;i++){
-            ans+=abs(mid-nums[i]);
+        int n=nums.size();
+        int l=0;
+        int r=n-1;
+        while(l<r){
+            ans+=(nums[r]-nums[l]);
+            l++;
+            r--;
         }
         return ans;
-
     }
 };
