@@ -1,24 +1,34 @@
 class Solution {
 public:
-
-int minMoves(vector<int>& nums) {
-    int n = nums.size();
-    int moves = 0;
+    long long minMoves(vector<int>& nums) {
+    vector<long long> a(nums.begin(), nums.end());
+    long long moves = 0;
 
     while (true) {
-        int maxIdx = max_element(nums.begin(), nums.end()) - nums.begin();
-        int minVal = *min_element(nums.begin(), nums.end());
+        long long mx = *max_element(a.begin(), a.end());
+        long long secondMax = LLONG_MIN;
+        int cnt = 0;
 
-        if (nums[maxIdx] == minVal) {
+        for (long long x : a) {
+            if (x == mx) {
+                cnt++;
+            } else {
+                secondMax = max(secondMax, x);
+            }
+        }
+
+        if (secondMax == LLONG_MIN) {
             break;
         }
 
-        for (int i = 0; i < n; i++) {
-            if (i != maxIdx) {
-                nums[i]++;
+        long long diff = mx - secondMax;
+        moves += diff * cnt;
+
+        for (long long& x : a) {
+            if (x == mx) {
+                x = secondMax;
             }
         }
-        moves++;
     }
     return moves;
 }
