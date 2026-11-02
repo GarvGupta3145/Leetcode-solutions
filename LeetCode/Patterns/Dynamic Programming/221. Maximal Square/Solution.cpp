@@ -4,10 +4,15 @@ public:
         int m=matrix.size();
         int n=matrix[0].size();
         vector<int>dp(n,0);
-        for(int i=0;i<n;i++){
-            if(matrix[0][i]=='1')dp[i]=1;
-        }
         int ans=0;
+        for(int i=0;i<n;i++){
+            if(matrix[0][i]=='1'){
+                dp[i]=1;
+                ans=1;
+            }
+            
+        }
+        
         for(int i=1;i<m;i++){
             int diag=0;
             for(int j=0;j<n;j++){
