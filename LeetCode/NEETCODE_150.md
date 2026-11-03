@@ -3,7 +3,7 @@
 Track your progress on the NeetCode 150 roadmap practice problems.
 
 ## Progress
-- **Completed:** 17 / 150 (11.3%)
+- **Completed:** 18 / 150 (12.0%)
 
 ---
 
@@ -143,7 +143,7 @@ Track your progress on the NeetCode 150 roadmap practice problems.
 - [ ] Best Time to Buy and Sell Stock with Cooldown
 - [ ] Coin Change II
 - [ ] Target Sum
-- [ ] Interleaving String
+- [x] [Interleaving String](./C++/Medium/97. Interleaving String/)
 - [ ] Longest Increasing Path in a Matrix
 - [ ] Distinct Subsequences
 - [ ] Edit Distance
