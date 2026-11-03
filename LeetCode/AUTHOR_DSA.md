@@ -3,7 +3,7 @@
 Track your progress on the Curated 100hrs DSA core interview preparation list.
 
 ## Progress
-- **Completed:** 17 / 238 (7.1%)
+- **Completed:** 18 / 238 (7.6%)
 
 ---
 
@@ -173,7 +173,7 @@ Track your progress on the Curated 100hrs DSA core interview preparation list.
 - [ ] First Occurrence in a String
 - [ ] Shuffle String
 - [ ] Merge Strings Alternately
-- [ ] Fizz Buzz
+- [x] [Fizz Buzz](./C++/Easy/412. Fizz Buzz/)
 - [ ] Number of Strings That Appear as Substrings in Word
 - [ ] Count Asterisks
 - [ ] Strong Password Checker
