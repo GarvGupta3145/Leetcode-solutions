@@ -1,6 +1,6 @@
 # 📝 97. Interleaving String (LeetCode)
 
-🔗 [Problem Link](https://leetcode.com/problems/interleaving-string/)
+🔗 [Problem Link](https://leetcode.com/problems/interleaving-string)
 
 ![Difficulty](https://img.shields.io/badge/Difficulty-Medium-orange) ![Language](https://img.shields.io/badge/Language-C++-blue)
 
