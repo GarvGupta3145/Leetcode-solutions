@@ -8,8 +8,8 @@
 Array, Stack, Greedy, Sorting, Monotonic Stack
 
 ### 🚀 Performance
-- **Runtime:** 8 ms
-- **Memory:** 17.6 MB
+- **Runtime:** N/A
+- **Memory:** N/A
 
 ---
 

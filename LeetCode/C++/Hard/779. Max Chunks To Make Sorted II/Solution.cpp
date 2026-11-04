@@ -1,23 +1,27 @@
 class Solution {
 public:
     int maxChunksToSorted(vector<int>& arr) {
-        unordered_map<int,int>mpp;
-        vector<int>nums=arr;
-        sort(nums.begin(),nums.end());
-        for(int i=0;i<arr.size();i++){
-            mpp[arr[i]]++;
+        map<int, int> freq;
+        for (int x : arr) {
+            freq[x]++;
         }
-        int ans=0;
-        int curr=nums[0];
-        int mc=arr[0];
-        int l=0;
-        for(int i=0;i<arr.size();i++){
-            mc=max(mc,arr[i]);
-            mpp[arr[i]]--;
-            while(l<nums.size() && nums[l]<=mc && mpp[nums[l]]==0)l++;
-            if(l<nums.size() && nums[l]>=mc)ans++;
 
+        int mx = INT_MIN;
+        int chunks = 0;
+
+        for (int i = 0; i < arr.size(); i++) {
+            mx = max(mx, arr[i]);
+
+            freq[arr[i]]--;
+            if (freq[arr[i]] == 0) {
+                freq.erase(arr[i]);
+            }
+
+            if (freq.empty() || mx <= freq.begin()->first) {
+                chunks++;
+            }
         }
-        return ++ans;
+
+        return chunks;
     }
 };
