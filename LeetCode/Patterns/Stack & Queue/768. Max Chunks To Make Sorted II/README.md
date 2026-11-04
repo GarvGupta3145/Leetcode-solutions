@@ -1,6 +1,6 @@
 # 📝 768. Max Chunks To Make Sorted II (LeetCode)
 
-🔗 [Problem Link](https://leetcode.com/problems/max-chunks-to-make-sorted-ii/)
+🔗 [Problem Link](https://leetcode.com/problems/max-chunks-to-make-sorted-ii)
 
 ![Difficulty](https://img.shields.io/badge/Difficulty-Hard-red) ![Language](https://img.shields.io/badge/Language-C++-blue)
 

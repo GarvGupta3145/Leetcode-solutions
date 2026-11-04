@@ -2,7 +2,7 @@ class Solution {
 public:
     int maxChunksToSorted(vector<int>& arr) {
         unordered_map<int,int>mpp;
-        
+        sort(arr.begin(),arr.end());
         for(int i=0;i<arr.size();i++){
             mpp[arr[i]]++;
         }
@@ -14,7 +14,7 @@ public:
         for(int i=0;i<arr.size();i++){
             mc=max(mc,arr[i]);
             mpp[arr[i]]--;
-            while((!mpp.count(curr) || mpp[curr]==0) && curr<=mc ){curr++;}
+            
             if(curr>=mc)ans++;
 
         }
