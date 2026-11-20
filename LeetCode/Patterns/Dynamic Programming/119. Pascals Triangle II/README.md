@@ -21,7 +21,7 @@ In  **Pascal's triangle** , each number is the sum of the two numbers directly a
 
  ![image](https://upload.wikimedia.org/wikipedia/commons/0/0d/PascalTriangleAnimated2.gif) 
 
-OriginalC++ **Example 1:**
+**Example 1:**
 
 ```
 Input: rowIndex = 3
