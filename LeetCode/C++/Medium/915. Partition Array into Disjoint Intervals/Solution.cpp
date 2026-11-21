@@ -14,7 +14,7 @@ public:
         int ans=INT_MAX;
         for(int i=0;i<n-1;i++){
             int diff=suffmn[i+1]-premx[i];
-            if(diff>=0 && diff<ans){
+            if(diff>=0 ){
                 ans=diff;
                 ind=i;
             }
