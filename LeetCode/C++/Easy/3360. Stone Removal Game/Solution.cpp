@@ -7,8 +7,8 @@ public:
             if(n-=st>0)n-=st;
             else return !win;
             win=!win;
-            st-
+            st--;
         }
-        return win;
+        return !win;
     }
 };
