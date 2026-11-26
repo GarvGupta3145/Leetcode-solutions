@@ -9,6 +9,6 @@ public:
             win=!win;
             st--;
         }
-        return win;
+        return !win;
     }
 };
