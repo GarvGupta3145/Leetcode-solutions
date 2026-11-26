@@ -4,7 +4,7 @@ public:
         int st=10;
         bool win=true;
         while(n>0){
-            if(n-=st>0)n-=st;
+            if(n-st>=0)n-=st;
             else return !win;
             win=!win;
             st--;
